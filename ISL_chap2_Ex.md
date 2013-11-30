@@ -1,11 +1,18 @@
 1. Flexible vs inflexible methods performance
+    
     a. When sample size n is large, and the number of predictors p is small: fitting a flexible method often requires a great number of parameters, so this is difficult when the sample space is large. 
+    
     b. when num of predictors p is large, and the number of observations is small, then it will be easy to fit an inflexible method
+    
     c. when the relationship between the predictors and response is very non-linear, then a flexible method will perform better
+    
     d. when the variance of the error terms is high, a more flexible method will perform better
 2. Classification or regression?
+    
     a. Inference, regression, p = 4, n = 500
+    
     b. Classification, prediction, n = 20, p = 14
+    
     c. Prediction, regression, p = 4, n = 52
 4c. Cluster analysis is usefull when you want to classify a set of points into several groups, that have many different dimensions or characteristics
 5. Flexible: Pros) Will always fit training data well, is prefered in non-linear cases Cons) prone to overfitting
