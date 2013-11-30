@@ -14,7 +14,12 @@
     b. Classification, prediction, n = 20, p = 14
     
     c. Prediction, regression, p = 4, n = 52
-4c. Cluster analysis is usefull when you want to classify a set of points into several groups, that have many different dimensions or characteristics
+
+3. (Drawing)
+
+4. c) Cluster analysis is usefull when you want to classify a set of points into several groups, that have many different dimensions or characteristics
+
 5. Flexible: Pros) Will always fit training data well, is prefered in non-linear cases Cons) prone to overfitting
     * Inflexible: Pros) the model may coincide with the true funtion that you are trying to approximate, prefered in linear cases Cons) makes assumptions about the underlying function, hard to correct these if the inflexible model was chosen wrongly
+
 6. Parametric - pick a model, and optimize the parameters of that model, simpler. Non-parametric - is prone to overfitting the model, but fits the data very well.
