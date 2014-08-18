@@ -31,7 +31,7 @@ glm.pred[glm.probs > 0.5] = "Up"
 # the off-diagonals show the incorrect predictions
 table(glm.pred, Direction)
 # can easily see the overlap between glm.pred and Direction, the percentage of correct predictions
-# ie the precent TRUE in the vector generated inside the parentheses
+# ie the percent TRUE in the vector generated inside the parentheses
 mean(glm.pred == Direction)
 # the training error rate is then 1 - this
 
@@ -45,7 +45,7 @@ Direction.2005 <- Direction[!train]
 # we could either create another data.frame with the other Smarket data, or...
 glm.fit <- glm(Direction ~ . - Year - Today, Smarket, subset = train, family = "binomial")
 glm.probs <- predict(glm.fit, Smarket.2005, type = "response")
-# lets do the same comparrison as above
+# lets do the same comparison as above
 glm.pred <- rep("Down", 252)
 glm.pred[glm.probs > 0.5] = "Up"
 table(glm.pred, Direction.2005)
@@ -59,13 +59,13 @@ lda.fit <- lda(Direction ~ Lag1 + Lag2, data = Smarket, subset = train)
 # the group means are the average of each predictor within each class (estimate of µk),
 # they indicate that there is a tendency for market to go Down when previous day had positive
 # returns, and up when previous day had negative returns
-# the "coefficients of linear discriminants" gives the linear  combination of the two 
+# the "coefficients of linear discriminants" gives the linear  combination of the two
 # predictors that is used to form the LDA decision rule (-0.642 * Lag1 - 0.514 * Lag2 = Pr[market_increase])
 lda.fit
-# compute linear discriminatnts (-0.642 * Lag1 - 0.514 * Lag2) for each observation and plot
+# compute linear discriminants (-0.642 * Lag1 - 0.514 * Lag2) for each observation and plot
 plot(lda.fit)
 lda.pred <- predict(lda.fit, Smarket.2005)
-# second element, "posterior", is a matrix whose kth column contrains the posterior Pr that the
+# second element, "posterior", is a matrix whose kth column constrains the posterior Pr that the
 # observation belongs to the kth class
 names(lda.pred)
 # if we want to predict a market decrease only if the posterior Pr is 90% or more
@@ -75,7 +75,7 @@ sum(lda.pred$posterior[, 1] > 0.9)
 library(class)
 # requires 1) matrix containing predictors for the training data, 2) matrix with
 # predictors for the data for which we predict 3) vector with class labels for training
-# observations,4) a value for K
+# observations, 4) a value for K
 # lets column bind Lag1 and Lag2 variables together in two matrices, training and test
 train.X <- cbind(Lag1, Lag2)[train, ]
 test.X <- cbind(Lag1, Lag2)[!train, ]
@@ -84,10 +84,10 @@ train.Direction <- Direction[train]
 knn.pred <- knn(train.X, test.X, train.Direction, k = 1)
 table(knn.pred, Direction.2005)
 # (83 + 43) / 252 == 0.5  # the percent of predictions that were correct
-# increasing K to 3 yeilds slightly better performance,but thats as good as it gets
+# increasing K to 3 yields slightly better performance, but thats as good as it gets
 
 ###################################### KNN for insurance
-# we standardize our variables to a mean of 0 and a std dev of 0, and exclude the Purchas variable
+# we standardize our variables to a mean of 0 and a std dev of 0, and exclude the Purchase variable
 standardized.X <- scale(Caravan[, -86])
 var(Caravan[, 1])
 var(standardized.X[, 1])

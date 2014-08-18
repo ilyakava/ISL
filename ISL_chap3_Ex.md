@@ -1,8 +1,8 @@
-1. The null hypothesis was originally that there is no relation between tv, radio, and newspaper advertising budgets and product sales. It also tells us that in the absense of tv and radio expenditures, sales are non-zero. The tiny p-value for the intercept tells us that we can reject the null hypothesis, i.e. that ß0 == 0. The tiny p-values for tv and radio accordingly tells us that we can reject the hypothese that ß1 == 0 and ß2 == 0, i.e. that there is no relationship between tv and sales, or radio and sales. Since the p-value for newspaper is substancially more than 5%, we can conclude that there is no relationship between newspaper advertisements and product sales, when tv and radio ads are kept constant.
+1. The null hypothesis was originally that there is no relation between tv, radio, and newspaper advertising budgets and product sales. It also tells us that in the absence of tv and radio expenditures, sales are non-zero. The tiny p-value for the intercept tells us that we can reject the null hypothesis, i.e. that ß0 == 0. The tiny p-values for tv and radio accordingly tells us that we can reject the hypotheses that ß1 == 0 and ß2 == 0, i.e. that there is no relationship between tv and sales, or radio and sales. Since the p-value for newspaper is substantially more than 5%, we can conclude that there is no relationship between newspaper advertisements and product sales, when tv and radio ads are kept constant.
 
 2. KNN regression estimates the f(x0) of a test point by looking at the average y of the K points closest to that test point. In contrast, the KNN classifier estimates the conditional probability of a test point equaling each variation of f(x0) and then assigns f(x0) to the value that is most likely.
 
-3. The estimated coeficient for IQ and the interaction between GPA and IQ are near zero.
+3. The estimated coefficient for IQ and the interaction between GPA and IQ are near zero.
 
     a. Answer is iii
 
@@ -16,7 +16,7 @@
 
     b. `50 + 20*4.0 + 0.07*110 + 35*1 + 0.01*4.0*110 + -10*4.0*1 = 137.1` in thousands of dollars.
 
-    c. We should be looking at the p-values in the model for the ß4 coeficient in order to determine whether or not the interaction effect is significant to the model. The coeficient only tells us how significant the interaction is relevant to the other parameters in the model, while the p-value would tell us how significant the interaction is with all other things kept constant.
+    c. We should be looking at the p-values in the model for the ß4 coeficient in order to determine whether or not the interaction effect is significant to the model. The coefficient only tells us how significant the interaction is relevant to the other parameters in the model, while the p-value would tell us how significant the interaction is with all other things kept constant.
 
 4. In the case of an accurate fit, ß2 and ß3 would be near zero.
 
@@ -32,7 +32,7 @@
 
 Extra: Why do we minimize the square of the error between our fit and the data?
 
-* It is a result of the following hypothesis: The error terms of the true model have a gausian distribution.
+* It is a result of the following hypothesis: The error terms of the true model have a Gaussian distribution.
 
     *  strong assumption about both the shape of the distribution and that the variance is the same for all points
 
@@ -42,6 +42,6 @@ Extra: Why do we minimize the square of the error between our fit and the data?
 
         *  product of errors, when you take the log of the product, it becomes the sum of the errors, and they are all the same, so you multiply by the number of observations
 
-*  We will notice a squared x in the gaussian distribution.
+*  We will notice a squared x in the Gaussian distribution.
 
 *  calculate likelihood function, probabilities of a certain error given an error. Maximize that you got the observation.

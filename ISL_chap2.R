@@ -8,14 +8,14 @@ contour(x,y,f, nlevels=45, add=T)
 fa = (f - t(f)) / 2
 contour(x,y,fa, nlevels=15)
 
-#################################### Excercise question 7
+#################################### Exercise question 7
 X1 <- c(0,2,0,0,-1,1)
 X2 <- c(3,0,1,1,0,0)
 X3 <- c(0,0,3,2,1,2)
 Y <- c("Red", "Red", "Red", "Green", "Green","Red")
 obs <- data.frame(X1 = X1, X2 = X2, X3 = X3, Y = Y)
 test_point <- c(0,0,0,NULL)
-# compute euclidian distance between the test point and all the other rows
+# compute euclidean distance between the test point and all the other rows
 obs_matrix <- obs[,1:3]
 sqrt.sum_squares = function(x) { sqrt(sum(x**2)) }
 distances <- apply(obs_matrix, 1, sqrt.sum_squares)
@@ -32,22 +32,22 @@ most_common = sort(table(K3),decreasing=TRUE)[1]
 # lower K corresponds to a more flexible model. As K grows, bias grows and variance shrinks
 
 
-#################################### Excercise question 8
+#################################### Exercise question 8
 require(ISLR)
 college <- College
 # X11 popout display of data
 fix(college)
-# pairs of varaibles are made into scatterplots
+# pairs of variables are made into scatter plots
 pairs(college[,1:10])
 # graphing
 # y vs x => independent vs dependent => abscissa vs ordinate
-# boxplots: if the variables on the x axis are categorical, 
+# boxplots: if the variables on the x axis are categorical,
 # then boxplots will automatically be produced by plot()
 
 # here, the outstate price is on the Y axis, and yes no values for Private are on the x axis
 plot(college$Private, college$Outstate)
 
-# make a new elite category: Yes when at least 50% of their student body is comming
+# make a new elite category: Yes when at least 50% of their student body is coming
 # from the Top10perc of their high school
 Elite <- rep("No", nrow(college))
 Elite[college$Top10perc > 50] <- "Yes"
@@ -58,7 +58,7 @@ plot(college$Elite, college$Outstate)
 # divide the screen
 par(mfrow = c(2,2))
 
-#################################### Excercise question 9
+#################################### Exercise question 9
 auto <- Auto
 # as.factor() will convert a quantitative variable into a qualitative one
 # this is relevant for origin, cylinders, and name in this data-set
@@ -69,4 +69,4 @@ auto$origin <- as.factor(auto$origin)
 plot(auto$origin, auto$mpg)
 
 #image <- par(mfrow = c(1,2))
-#image[1] 
+#image[1]
