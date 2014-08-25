@@ -1,4 +1,4 @@
-########################### Q 10.8
+########################### Exercise question 8
 us.a <- USArrests
 pca <- prcomp(us.a, scale = T)
 par(mfrow = c(1,2))
@@ -35,7 +35,7 @@ for(m in seq_along(pca$rotation[1])) {
 }
 plot(principal.component, pve2.scaled, type = 'b')
 
-########################### Q 10.10
+########################### Exercise question 10
 # a) create data
 set.seed <- 1
 data.maker <- function(n.obs, n.feat, n.classes) {
