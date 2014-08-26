@@ -19,7 +19,9 @@ b. Classification, prediction, n = 20, p = 14
 
 c. Prediction, regression, p = 4, n = 52
 
-2.3. (Drawing)
+2.3.
+
+a. ![drawing](./pics/2_3_a.png)
 
 2.4. c) Cluster analysis is useful when you want to classify a set of points into several groups, that have many different dimensions or characteristics
 
