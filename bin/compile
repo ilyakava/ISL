@@ -1,0 +1,1 @@
+pandoc $(ls | grep 'ISL.*md') -o ISL_conceptual_solutions.pdf
